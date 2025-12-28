@@ -118,6 +118,36 @@ required_roles_mode: all
 * **all**: User must have *every* listed role
 * **any**: User must have *at least one* listed role
 
+## Restricting Navbar items
+
+```ts
+const config: Config = {
+  // ...
+  themeConfig: {
+    // ...
+    navbar: {
+      items: [
+        {
+          type: "docSidebar",
+          sidebarId: "tutorialSidebar",
+          position: "left",
+          label: "Tutorial",
+          // NOTE: This is camel case not snake_case like FrontMatter to match conventions
+          requiredRoles: ["...", /* ... */],
+          requiredRolesMode: "any"
+        },
+        { to: "/blog", label: "Blog", position: "left" },
+        {
+          href: "https://github.com/facebook/docusaurus",
+          label: "GitHub",
+          position: "right",
+        },
+      ],
+    },
+  }
+}
+```
+
 ---
 
 ## Unauthorized Behavior
