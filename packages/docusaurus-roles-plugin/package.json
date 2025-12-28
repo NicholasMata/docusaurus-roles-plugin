@@ -1,0 +1,52 @@
+{
+  "name": "docusaurus-roles-plugin",
+  "version": "0.1.0",
+  "description": "Role-based gating for Docusaurus docs/blog via React context + front matter",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js"
+    },
+    "./runtime": {
+      "types": "./dist/runtime/index.d.ts",
+      "require": "./dist/runtime/index.cjs",
+      "import": "./dist/runtime/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "src/theme"
+  ],
+  "dependencies": {
+    "@docusaurus/logger": "^3.9.0"
+  },
+  "peerDependencies": {
+    "@docusaurus/core": "^3.9.0",
+    "@docusaurus/theme-common": "^3.9.0",
+    "@docusaurus/theme-translations": "^3.9.0",
+    "@docusaurus/utils-validation": "^3.9.0",
+    "react": ">=18",
+    "react-dom": ">=18"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "@docusaurus/types": "^3.9.0",
+    "@docusaurus/theme-classic": "^3.9.0",
+    "@docusaurus/module-type-aliases": "^3.9.0",
+    "@docusaurus/plugin-content-blog": "^3.9.0",
+    "@docusaurus/plugin-content-docs": "^3.9.0",
+    "tsup": "^8.5.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "name": "roles-plugin-workspace",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "website"
+  ],
+  "scripts": {
+    "build": "npm -ws run build",
+    "dev": "npm -ws run dev"
+  }
+}
