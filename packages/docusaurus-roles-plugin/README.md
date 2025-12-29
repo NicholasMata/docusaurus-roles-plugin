@@ -36,6 +36,7 @@ npm install docusaurus-roles-plugin
 ### 1. Add the plugin to `docusaurus.config.ts`
 
 ```ts
+// docusaurus.config.ts
 import { protectBlogSidebar, protectDocSidebar } from "docusaurus-roles-plugin";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
@@ -121,6 +122,7 @@ required_roles_mode: all
 ## Restricting Navbar items
 
 ```ts
+// docusaurus.config.ts
 const config: Config = {
   // ...
   themeConfig: {
