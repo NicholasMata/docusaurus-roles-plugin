@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-roles-plugin",
-  "version": "1.0.0-beta.1",
+  "version": "1.0.0-beta.2",
   "description": "Role-based gating for Docusaurus docs/blog via React context + front matter",
   "repository": {
     "type": "git",
