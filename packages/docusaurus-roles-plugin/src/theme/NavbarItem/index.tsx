@@ -1,6 +1,6 @@
 import NavbarItem, { Props } from "@theme-init/NavbarItem";
 import { useRoles, isAllowed } from "docusaurus-roles-plugin/runtime";
-import { RoleRequirements } from "../../options";
+import { RoleRequirements } from "docusaurus-roles-plugin/options";
 
 export default function RolesNavbarItem({
   requiredRoles = [],

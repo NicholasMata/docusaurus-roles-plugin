@@ -11,7 +11,7 @@ import {
   SidebarItemsGeneratorOption,
 } from "@docusaurus/plugin-content-docs/src/sidebars/types.js";
 
-export { RolesPluginOptions } from "./options";
+export { type RolesPluginOptions } from "./options";
 
 /**
  * Used to apply FrontMatter required_roles and required_roles_mode to
@@ -96,6 +96,10 @@ export default function pluginRoles(
     name: "docusaurus-roles-plugin",
 
     getThemePath() {
+      return path.resolve(__dirname, "./theme");
+    },
+
+    getTypeScriptThemePath() {
       return path.resolve(__dirname, "../src/theme");
     },
 

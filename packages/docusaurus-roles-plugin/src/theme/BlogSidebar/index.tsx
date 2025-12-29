@@ -1,7 +1,7 @@
 import { usePluginData } from "@docusaurus/useGlobalData";
 import BlogSidebar, { type Props } from "@theme-init/BlogSidebar";
 import { isAllowed, useRoles } from "docusaurus-roles-plugin/runtime";
-import { type InternalRolesPluginOptions } from "../../options";
+import { type InternalRolesPluginOptions } from "docusaurus-roles-plugin/options";
 
 export default function BlogSidebarWrapper({ sidebar, ...props }: Props) {
   const plugin = usePluginData(

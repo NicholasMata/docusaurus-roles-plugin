@@ -1,8 +1,8 @@
 import BlogPostItem, { type Props } from "@theme-init/BlogPostItem";
-import RoleGate from "../RoleGate";
-import { getRoleFrontMatter } from "../../options";
+import RoleGate from "../RoleGate.js";
+import { getRoleFrontMatter } from "docusaurus-roles-plugin/options";
 import { useBlogPost } from "@docusaurus/plugin-content-blog/client";
-import ForbiddenBlogPostItem from "./Forbidden";
+import ForbiddenBlogPostItem from "./Forbidden.js";
 
 export default function BlogPostItemWrapper(props: Props) {
   const { metadata } = useBlogPost();

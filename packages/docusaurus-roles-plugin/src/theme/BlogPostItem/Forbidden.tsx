@@ -8,10 +8,7 @@ export default function ForbiddenBlogPostItem({
 }): ReactNode {
   return (
     <main className={"container margin-vert--xl"}>
-      <BaseForbiddenContent
-        prefixTranslateId="theme.BlogPostItem.Forbidden"
-        missingRoles={missingRoles}
-      />
+      <BaseForbiddenContent prefixTranslateId="theme.BlogPostItem.Forbidden" />
     </main>
   );
 }

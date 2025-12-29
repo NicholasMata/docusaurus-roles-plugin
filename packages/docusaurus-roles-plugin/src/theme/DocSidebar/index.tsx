@@ -1,6 +1,6 @@
 import DocSidebar, { type Props } from "@theme-init/DocSidebar";
-import { getRoleFrontMatter } from "../../options";
-import { isAllowed, useRoles } from "../../runtime";
+import { getRoleFrontMatter } from "docusaurus-roles-plugin/options";
+import { isAllowed, useRoles } from "docusaurus-roles-plugin/runtime";
 import type {
   PropSidebarItem,
   PropSidebarItemCategory,

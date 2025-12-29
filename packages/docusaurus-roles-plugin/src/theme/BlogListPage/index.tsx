@@ -1,7 +1,7 @@
 import BlogListPage from "@theme-init/BlogListPage";
 import { useRoles, isAllowed } from "docusaurus-roles-plugin/runtime";
 import type { Props } from "@theme/BlogListPage";
-import { getRoleFrontMatter } from "../../options";
+import { getRoleFrontMatter } from "docusaurus-roles-plugin/options";
 
 export default function BlogListPageWrapper({ items, ...rest }: Props) {
   const { roles, loading } = useRoles();

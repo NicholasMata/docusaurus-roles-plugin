@@ -6,10 +6,5 @@ export default function ForbiddenDocItem({
 }: {
   missingRoles: string[];
 }): JSX.Element {
-  return (
-    <BaseForbiddenContent
-      prefixTranslateId="theme.DocItem.Forbidden"
-      missingRoles={missingRoles}
-    />
-  );
+  return <BaseForbiddenContent prefixTranslateId="theme.DocItem.Forbidden" />;
 }

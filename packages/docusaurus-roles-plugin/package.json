@@ -25,7 +25,14 @@
       "types": "./dist/runtime/index.d.ts",
       "require": "./dist/runtime/index.cjs",
       "import": "./dist/runtime/index.js"
-    }
+    },
+    "./options": {
+      "import": "./dist/options/index.js",
+      "require": "./dist/options/index.cjs",
+      "types": "./dist/options/index.d.ts"
+    },
+
+    "./theme/*": "./dist/theme/*"
   },
   "files": [
     "dist",

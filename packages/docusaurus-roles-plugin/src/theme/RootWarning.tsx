@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function RootWarning() {
   return (
     <div style={{ padding: 16 }}>

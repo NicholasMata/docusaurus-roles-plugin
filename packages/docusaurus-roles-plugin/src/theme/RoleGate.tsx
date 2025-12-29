@@ -6,8 +6,8 @@ import {
   isAllowed,
   type RoleMode,
 } from "docusaurus-roles-plugin/runtime";
-import RootWarning from "./RootWarning";
-import { PluginOptions } from "../options";
+import RootWarning from "./RootWarning.js";
+import { type RolesPluginOptions } from "docusaurus-roles-plugin";
 
 type Props = {
   requiredRoles?: string[];
@@ -17,7 +17,7 @@ type Props = {
 };
 
 export function getPluginConfig() {
-  return usePluginData("docusaurus-roles-plugin") as PluginOptions;
+  return usePluginData("docusaurus-roles-plugin") as RolesPluginOptions;
 }
 
 export default function RoleGate({
