@@ -139,12 +139,6 @@ const config: Config = {
           requiredRoles: ["...", /* ... */],
           requiredRolesMode: "any"
         },
-        { to: "/blog", label: "Blog", position: "left" },
-        {
-          href: "https://github.com/facebook/docusaurus",
-          label: "GitHub",
-          position: "right",
-        },
       ],
     },
   }
@@ -173,7 +167,9 @@ const config: Config = {
             {
               label: "Tutorial",
               to: "/docs/intro",
-              requiredRoles: ["admin"]
+              // NOTE: This is camel case not snake_case like FrontMatter to match conventions
+              requiredRoles: ["...", /* ... */],
+              requiredRolesMode: "any"
             }
           ]
         }
@@ -239,18 +235,7 @@ Relevant documentation:
   },
   "auth": {
     "identityProviders": {
-      "azureActiveDirectory": {
-        "registration": {
-          "openIdIssuer": "https://login.microsoftonline.com/***/v2.0",
-          "clientIdSettingName": "***",
-          "clientSecretSettingName": "***"
-        },
-        "login": {
-          "loginParameters": [
-            "scope=openid profile email"
-          ]
-        }
-      }
+      // ...
     }
   }
 }
