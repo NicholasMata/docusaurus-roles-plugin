@@ -1,9 +1,9 @@
 import path from "path";
 import type { LoadContext, Plugin } from "@docusaurus/types";
 import {
-  getRoleRequirements,
   type RolesPluginOptions,
   type RoleEntry,
+  transformRoleFrontMatterToRoleRequirements,
 } from "./options";
 import { BlogPost, ProcessBlogPostsFn } from "@docusaurus/plugin-content-blog";
 import {
@@ -74,7 +74,7 @@ export const setRolesByPermaLink = (blogPosts: BlogPost[]) => {
 
   rolesByPermalink = blogPosts.map((bp) => ({
     permalink: bp.metadata.permalink,
-    ...getRoleRequirements(bp.metadata.frontMatter),
+    ...transformRoleFrontMatterToRoleRequirements(bp.metadata.frontMatter),
   }));
 
   blogRolesReady.resolve();

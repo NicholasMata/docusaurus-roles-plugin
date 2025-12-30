@@ -30,10 +30,22 @@ export function getRoleFrontMatter(frontMatter: unknown): RoleFrontMatter {
   return frontMatter as RoleFrontMatter;
 }
 
-export function getRoleRequirements(frontMatter: unknown): RoleRequirements {
+export function transformRoleFrontMatterToRoleRequirements(
+  frontMatter: unknown,
+): RoleRequirements {
   const roleFrontMatter = getRoleFrontMatter(frontMatter);
   return {
     requiredRoles: roleFrontMatter.required_roles ?? [],
     requiredRolesMode: roleFrontMatter.required_roles_mode ?? "all",
   };
+}
+
+export function getRoleRequirements(obj: unknown): RoleRequirements {
+  if (
+    !obj ||
+    typeof obj !== "object" ||
+    !("requiredRoles" in obj || "requiredRolesMode" in obj)
+  )
+    return { requiredRoles: [], requiredRolesMode: "all" };
+  return obj as RoleRequirements;
 }

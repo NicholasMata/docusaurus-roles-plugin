@@ -27,9 +27,9 @@
       "import": "./dist/runtime/index.js"
     },
     "./options": {
-      "import": "./dist/options/index.js",
+      "types": "./dist/options/index.d.ts",
       "require": "./dist/options/index.cjs",
-      "types": "./dist/options/index.d.ts"
+      "import": "./dist/options/index.js"
     },
 
     "./theme/*": "./dist/theme/*"

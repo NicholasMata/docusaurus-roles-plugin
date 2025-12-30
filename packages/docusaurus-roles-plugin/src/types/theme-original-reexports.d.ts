@@ -40,3 +40,8 @@ declare module "@theme-init/NavbarItem/NavbarNavLink" {
   export { default } from "@theme/NavbarItem/NavbarNavLink";
   export * from "@theme/NavbarItem/NavbarNavLink";
 }
+
+declare module "@theme-init/Footer/Links" {
+  export { default } from "@theme/Footer/Links";
+  export * from "@theme/Footer/Links";
+}

@@ -112,6 +112,7 @@ const config: Config = {
             {
               label: "Tutorial",
               to: "/docs/intro",
+              requiredRoles: ["admin"],
             },
           ],
         },
