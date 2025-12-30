@@ -15,11 +15,12 @@ This plugin allows you to **conditionally hide or forbid access** to content (do
 
 ## Features
 
-- 🔒 Restrict access to **individual docs and blog posts**
-- 🧭 Hide or filter **navbar items**
-- 📚 Restrict **doc and blog sidebars**
-- 🧩 Works with async role resolution (e.g. auth providers, APIs)
-- 🏷️ Role requirements defined directly in **front matter**
+- 🔒 Role-based restrictions for:
+  - Content pages (docs and blog posts)
+  - Site navigation (navbar and footer links)
+  - Sidebars (docs and blog)
+- 🏷️ Front matter–driven role configuration
+- ⚡ Asynchronous role resolution support
 
 ---
 
@@ -119,7 +120,7 @@ required_roles_mode: all
 * **all**: User must have *every* listed role
 * **any**: User must have *at least one* listed role
 
-## Restricting Navbar items
+## Restricting Navbar Items
 
 ```ts
 // docusaurus.config.ts
@@ -146,6 +147,38 @@ const config: Config = {
         },
       ],
     },
+  }
+}
+```
+
+## Restricting Footer Links
+
+Currently, it is not possible to restrict an entire footer category due to schema validation enforced by Docusaurus  
+(see [`theme-classic/src/options.ts`](https://github.com/facebook/docusaurus/blob/e5ab150e8bfe903f07248684c865646c13575c98/packages/docusaurus-theme-classic/src/options.ts#L336)).
+
+If all items within a footer category are unavailable to the user, the category will be removed automatically.
+
+```ts
+// docusaurus.config.ts
+const config: Config = {
+  // ...
+  themeConfig: {
+    // ...
+    footer: {
+      // ...
+      links: [
+        {
+          title: "Docs",
+          items: [
+            {
+              label: "Tutorial",
+              to: "/docs/intro",
+              requiredRoles: ["admin"]
+            }
+          ]
+        }
+      ]
+    }
   }
 }
 ```
